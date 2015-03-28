@@ -1,0 +1,11 @@
+<p>This is the menu view.</p>
+
+<ul>
+    <li ng-repeat="d in dashboards">
+        <div>
+            <div class="name"><a href="{{getPath(d)}}">{{d.name}}</a></div>
+            <div class="description">{{d.description}}</div>
+        </div>
+    </li>
+</ul>
+{{dashboards}}
