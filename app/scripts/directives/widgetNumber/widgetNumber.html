@@ -1,0 +1,16 @@
+<div>
+  <div class="title p-t-sm">{{header}}</div>
+  <div class="content flex-center flex-column">
+    <div class="value">
+      <span class="prefix">{{prefix}}</span>
+      <span>{{data.value}}</span>
+      <span class="suffix">{{suffix}}</span>
+    </div>
+    <div ng-if="showVariation" class="variation">
+      <i class="hpe-icon" ng-class="{'hpe-caret-down-filled text-warning': (data.variation < 0), 'hpe-caret-up-filled text-primary': (data.variation > 0), 'hpe-play': (data.variation === 0)}"></i>
+      <span ng-if="(data.variation < 0)">{{-data.variation}} %</span>
+      <span ng-if="(data.variation >= 0)">{{data.variation}} %</span>
+    </div>
+  </div>
+  <div updated-at="data.updatedAt"></div>
+</div>

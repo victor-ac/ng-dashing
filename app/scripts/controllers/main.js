@@ -15,9 +15,9 @@ angular.module('myDashingApp')
 
     // handles the callback from the received event
     var handleCallback = function (msg) {
-      console.log('msg is here', msg);
+      // console.log('msg is here', msg);
       $scope.$apply(function () {
-        $log.info('got msg', msg);
+        // $log.info('got msg', msg);
         var msgData = JSON.parse(msg.data);
         $rootScope[msgData.id] = msgData;
       });

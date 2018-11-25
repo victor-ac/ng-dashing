@@ -2,17 +2,20 @@
 // endbower
 
 .browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    margin: 0.2em 0;
+    padding: 0.2em 0;
 }
 
-/* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
-    background:black;
+    background: #fff;
+}
+
+.gridster .preview-holder {
+    background-color: #ccc;
+    border-color: #ccc;
+    margin: 19px 8px 8px 8px;
 }
 
 //.gridster{
@@ -21,88 +24,195 @@ body {
 //        width: 960px;
 //    }
 //}
-.gridster ul{
-    list-style:none;
+
+.gridster > ul{
+    list-style: none;
+}
+
+.gridster > ul > li {
+    background-color: transparent;
+    padding: 8px;
 }
 
 .gs-w{
-    background:white;
+    background: white;
+}
+
+.gs-resize-handle-both {
+    bottom: -13px;
+    right: -3px;
+}
+
+.widget {
+    background: white;
+    box-shadow: 0 2px 10px 0 #ccc;
+    height: 100%;
+
+    /* Title for all widgets */
+    .title {
+        color: #333;
+        font-size: 1.25rem;
+        font-weight: 600;
+        padding: 10px 20px;
+    }
+
+    /* Content for all widgets */
+    .content {
+        height: 100%;
+        padding: 0 20px 30px 20px;
+        width: 100%;
+        @extend .flex-grow;
+    }
+
+    [updated-at] {
+        bottom: 5px;
+        font-size: 12px;
+        position: absolute;
+        right: 20px;
+    }
+
+    table {
+        margin-bottom: 0;
+    }
+
+    & > div {
+        @extend .flex-column;
+        margin-top: 10px;
+    }
+}
+
+.blue {
+    color: #0073e7;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.flex-grow {
+    display: flex;
+    flex: 1;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+/* UX Aspects overrides */
+.tree-node.highlight .title-readonly {
+    cursor: pointer;
+}
+
+.tree-node a:focus, .tree-node span:focus {
+    outline: 0;
+}
+
+.p-b-sm {
+    padding-bottom: 10px !important;
+}
+
+.jspContainer {
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+.jspPane {
+    width: calc(100% - 10px) !important;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
 .footer {
-  padding-left: 15px;
-  padding-right: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        line-height: 40px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-bottom: 19px;
+    }
 }
 
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+    color: #777;
+    padding-top: 19px;
 }
 
 .container-narrow > hr {
-  margin: 30px 0;
+    margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: center;
 
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+    .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+    }
 }
 
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
+    margin: 40px 0;
 
-  p + h4 {
-    margin-top: 28px;
-  }
+    p + h4 {
+        margin-top: 28px;
+    }
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+    .container {
+        max-width: 730px;
+    }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
 }
 
-@import './widgets/widget_text';
+@import './widgets/widget_chart';
+@import './widgets/widget_clock';
+@import './widgets/widget_countdown';
+@import './widgets/widget_date';
+@import './widgets/widget_grid';
+@import './widgets/widget_image';
+@import './widgets/widget_list';
+@import './widgets/widget_number';
+@import './widgets/widget_profile';
+@import './widgets/widget_progress';
+@import './widgets/widget_rss_feed';
 @import './widgets/widget_table';
+@import './widgets/widget_text';

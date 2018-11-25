@@ -1,0 +1,16 @@
+<div>
+    <div ng-if="header" class="title">{{header}}</div>
+    <div class="content flex-column p-b-sm">
+        <div scroll-pane scroll-config="scrollBarConfig" class="full-height">
+            <div class="text-center">
+                <div class="picture">
+                    <img ng-src="{{data.picture}}">
+                </div>
+                <div class="name blue">{{data.name}}</div>
+            </div>
+            <div ng-repeat="(key, value) in data.value">
+                <strong>{{key}}:</strong> {{value}}
+            </div>
+        </div>
+    </div>
+</div>

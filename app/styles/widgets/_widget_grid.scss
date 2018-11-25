@@ -1,7 +1,11 @@
-[widget-table] {
+[widget-grid] {
     thead {
         font-weight: 700;
         text-transform: uppercase;
     }
-}
 
+    grid {
+        overflow: auto;
+        width: 100%;
+    }
+}

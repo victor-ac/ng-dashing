@@ -1,0 +1,14 @@
+<div>
+    <div ng-if="header" class="title">{{header}}</div>
+    <div class="content flex-center flex-column text-center">
+        <div class="flex-row">
+            <div ng-repeat="item in time">
+                <div class="value" ng-style="{'background-color': item.color}">{{item.value}}</div>
+                <div class="unit" ng-style="{'color': item.color}">{{item.unit}}</div>
+            </div>
+        </div>
+        <div class="target">
+            Time remaining until {{data.value | date:dateFormat}}
+        </div>
+    </div>
+</div>

@@ -10,6 +10,7 @@
  */
 angular
     .module('myDashingApp', [
+        'ux-aspects',
         'ngAnimate',
         'ngCookies',
         'ngResource',
@@ -19,8 +20,15 @@ angular
     ])
     .config(function ($routeProvider) {
         $routeProvider
+            .when('/', {
+                templateUrl: 'views/allDashboards.html',
+                controller: 'AllDashboardsCtrl',
+                controllerAs: 'vm'
+            })
             .when('/:namespace/:dashboard', {
-                templateUrl: function(params){  return 'views/dashboards/' + params.namespace + '/' + params.dashboard + '.html';},
+                templateUrl: function (params) {
+                    return 'views/dashboards/' + params.namespace + '/' + params.dashboard + '.html';
+                },
                 controller: 'DashboardCtrl'
             })
             .when('/:namespace', {

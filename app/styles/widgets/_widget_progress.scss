@@ -1,0 +1,33 @@
+[widget-progress] {
+    .percentage {
+        color: #fff;
+        font-size: 45px;
+        line-height: 60%;
+        position: absolute;
+    }
+
+    .progress {
+        background-color: rgba(198, 23, 157, 0.2);
+        height: 30%;
+        width: 90%;
+        .progress-bar {
+            background-color: #c6179d;
+        }
+    }
+
+    .bar-value {
+        color: #7425ad;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 55px;
+        position: absolute;
+    }
+
+    .donut-value {
+        color: #c6179d;
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 30px;
+        position: absolute;
+    }
+}

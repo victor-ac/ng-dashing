@@ -1,0 +1,10 @@
+<div>
+    <div class="title">{{header}}</div>
+    <div class="content">
+        <div class="flot-chart">
+            <flot dataset="vm.liveChart.series" options="vm.liveChart.options"></flot>
+        </div>
+        <div class="blue number">{{yAxisPrefixUnit}}{{vm.dataPoints[vm.dataPoints.length - 1]}}{{yAxisSuffixUnit}}</div>
+    </div>
+    <div updated-at="data.updatedAt"></div>
+</div>

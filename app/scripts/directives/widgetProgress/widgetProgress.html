@@ -1,0 +1,12 @@
+<div>
+    <div class="title">{{header}}</div>
+    <div class="content flex-center">
+        <span ng-if="type === 'progress-bar'" class="percentage">{{percentage}}</span>
+        <span ng-if="type === 'progress-bar' && showValue" class="bar-value">{{data.value.current}} of {{data.value.total}}</span>
+        <progressbar ng-if="type === 'progress-bar'" value="data.value.current" max="data.value.total || 100" class="m-b-nil"></progressbar>
+
+        <nested-donut ng-if="type === 'donut' && !_.isUndefined(data.value)" dataset="dataset" options="donutOptions"></nested-donut>
+        <div ng-if="type === 'donut' && showValue" class="donut-value">{{value}}</div>
+    </div>
+    <div updated-at="data.updatedAt"></div>
+</div>

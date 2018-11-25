@@ -1,0 +1,44 @@
+[widget-list] {
+    ul {
+        text-align: left;
+
+        li {
+          line-height: 38px;
+        }
+
+        .item {
+            background-color: rgba(189, 190, 192, 0.2);
+            border-left: 6px solid rgba(189, 190, 192, 0.5);
+            border-radius: 5px;
+            border-right: 6px solid rgba(189, 190, 192, 0.5);
+            color: black;
+            height: 38px;
+            margin: 3px;
+        }
+    }
+
+    ol li {
+        line-height: 40px;
+    }
+
+    .limit-note {
+        bottom: 20px;
+        position: absolute;
+        right: 20px;
+    }
+
+    .light-background {
+        background-color: rgba(0, 115, 231, 0.1);
+    }
+
+    .hide-bullets {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .empty-message {
+        font-size: 20px;
+        @extend .flex-column;
+        @extend .flex-center;
+    }
+}

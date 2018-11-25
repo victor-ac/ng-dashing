@@ -9,11 +9,12 @@
 angular.module('myDashingApp')
     .directive('widgetText', function () {
         return {
-            template: '<div><div class="title">{{data.title}}</div><div class="value">{{data.value}}</div><div updated-at="data.updatedAt"></div></div>',
+            templateUrl: 'scripts/directives/widgetText/widgetText.html',
             restrict: 'A',
             scope:{
-                'data': '=widgetText'
+                'data': '=widgetText',
+                'header': '@',
+                'small': '=?'
             }
-
         };
     });

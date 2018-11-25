@@ -1,0 +1,24 @@
+<div>
+    <div class="title">{{header}}</div>
+    <div class="content flex-column">
+        <div ng-if="data.items.length" scroll-pane scroll-config="vm.scrollBarConfig" class="full-height">
+            <timeline>
+                <timeline-event ng-repeat="item in data.items">
+                    <timeline-badge ng-class="'primary'">
+                        <span ng-bind="item.timeAgo"></span>
+                    </timeline-badge>
+                    <timeline-panel>
+                        <timeline-heading>
+                            <h4 ng-bind="item.title" class="m-t-nil"></h4>
+                        </timeline-heading>
+                        <p ng-bind="item.contentSnippet" class="m-b-nil"></p>
+                    </timeline-panel>
+                </timeline-event>
+            </timeline>
+        </div>
+        <div ng-if="!data.items.length" class="empty-message">
+            Feed has no items.
+        </div>
+    </div>
+    <div updated-at="data.updatedAt"></div>
+</div>

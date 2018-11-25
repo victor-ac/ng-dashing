@@ -1,0 +1,20 @@
+[widget-number] {
+    .prefix,
+    .suffix,
+    .value {
+        font-size: 50px;
+    }
+
+    .variation {
+        font-size: 30px;
+
+        .hpe-icon {
+            vertical-align: text-bottom;
+        }
+    }
+
+    .text-primary {
+        color: #0073e7;
+    }
+}
+

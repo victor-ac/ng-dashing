@@ -8,14 +8,14 @@
  * Controller of the myDashingApp
  */
 angular.module('myDashingApp')
-  .controller('MenuCtrl', function ($scope, $routeParams, DashboardClient) {
-        DashboardClient.listDashboards($routeParams.namespace).then(function(result){
-            $scope.dashboards= result.data;
-        }, function(){
+  .controller('MenuCtrl', function ($scope, $routeParams, dashboardService) {
+        dashboardService.getNamespaceDashboards($routeParams.namespace).then(function (result) {
+            $scope.dashboards = result.data;
+        }, function (error) {
             toastr.error('no connection');
         });
 
-        $scope.getPath = function(dashboard){
-            return '#/'+$routeParams.namespace + '/' + dashboard.name;
-        }
+        $scope.getPath = function(dashboard) {
+            return '#/'+ $routeParams.namespace + '/' + dashboard.name;
+        };
   });

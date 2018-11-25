@@ -1,0 +1,33 @@
+<div>
+    <div class="title">{{header}}</div>
+    <div class="content flex-column">
+        <div ng-if="data.list.length" scroll-pane scroll-config="vm.scrollBarConfig" class="full-height">
+            <ul ng-if="!isOrdered" ng-class="{'hide-bullets': hideBullets}">
+                <div ng-class-odd="{'light-background': !hideBullets}">
+                    <li ng-if="!limit" ng-repeat="item in data.list" ng-include="'itemTemplate'"></li>
+                    <li ng-if="limit" ng-repeat="item in data.list | limitTo:limit" ng-include="'itemTemplate'"></li>
+                </div>
+            </ul>
+            <ol ng-if="isOrdered">
+                <div ng-class-odd="'light-background'">
+                    <li ng-if="!limit" ng-repeat="item in data.list" ng-include="'itemTemplate'"></li>
+                    <li ng-if="limit" ng-repeat="item in data.list | limitTo:limit" ng-include="'itemTemplate'"></li>
+                </div>
+            </ol>
+        </div>
+        <div ng-if="!data.list.length && emptyMessage" class="empty-message">
+            {{emptyMessage}}
+        </div>
+        <div ng-if="data.list.length > limit" class="limit-note">
+            <em>(Showing {{limit}} of {{data.list.length}})</em>
+        </div>
+    </div>
+    <div updated-at="data.updatedAt"></div>
+</div>
+
+<script type="text/ng-template" id="itemTemplate">
+    <div ng-class="{'item': hideBullets}" ng-style="{'background-color': backgroundColor, 'border-color': borderColor}">
+        <div class="col-md-6 text-left p-r-nil">{{item.name}}</div>
+        <div class="col-md-6 text-right">{{item.value}}</div>
+    </div>
+</script>

@@ -1,0 +1,9 @@
+<div>
+    <div ng-if="header" class="title">{{header}}</div>
+    <div class="content flex-center flex-column text-center">
+        <div class="date">{{data.value | date:dateFormat}}</div>
+        <div class="time blue">{{toTimezone(data.value) | date:timeFormat}}</div>
+        <div ng-if="timezone">{{timezone}} (UTC{{getTimezoneOffset(data.value)}})</div>
+        <div class="hpe-icon hpe-calendar icon"></div>
+    </div>
+</div>

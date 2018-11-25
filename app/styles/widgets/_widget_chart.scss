@@ -1,0 +1,17 @@
+[widget-chart] {
+    flot,
+    .flot-chart {
+        height: 100%;
+        width: 100%;
+    }
+
+    .number {
+        align-items: center;
+        display: flex;
+        font-size: 50px;
+        height: calc(100% - 125px);
+        justify-content: center;
+        position: absolute;
+        width: 95%;
+    }
+}
