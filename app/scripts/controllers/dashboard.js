@@ -8,10 +8,11 @@
  * Controller of the myDashingApp
  */
 angular.module('myDashingApp')
-    .controller('DashboardCtrl', function ($scope, $log) {
+    .controller('DashboardCtrl', function ($scope) {
         var gridster;
         $(document).ready(function () {
             gridster = $('.gridster > ul').gridster({
+                /*jshint camelcase: false */
                 widget_margins: [1,1],
                 widget_base_dimensions: [310, 310],
                 min_cols: 4,

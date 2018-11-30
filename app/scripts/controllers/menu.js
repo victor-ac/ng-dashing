@@ -12,7 +12,7 @@ angular.module('myDashingApp')
         dashboardService.getNamespaceDashboards($routeParams.namespace).then(function (result) {
             $scope.dashboards = result.data;
         }, function (error) {
-            toastr.error('no connection');
+            toastr.error('no connection (' + error + ')');
         });
 
         $scope.getPath = function(dashboard) {
