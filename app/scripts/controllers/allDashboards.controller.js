@@ -55,7 +55,7 @@ angular.module('myDashingApp')
                 });
             }
         },
-        function (error) {
+        function () {
             vm.treeViewData = [];
         });
 
