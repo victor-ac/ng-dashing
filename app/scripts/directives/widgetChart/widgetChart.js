@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetChart
+ * @name uxAspectsDashing.directive:widgetChart
  * @description
  * # widgetChart
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetChart', ['$colorService', function ($colorService) {
         return {
             templateUrl: 'scripts/directives/widgetChart/widgetChart.html',

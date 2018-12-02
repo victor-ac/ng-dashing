@@ -3,7 +3,7 @@
 describe('Service: dashboardService', function () {
 
   // load the service's module
-  beforeEach(module('myDashingApp'));
+  beforeEach(module('uxAspectsDashing'));
 
   // instantiate service
   var dashboardService;

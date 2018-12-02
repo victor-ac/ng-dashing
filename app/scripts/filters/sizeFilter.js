@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .filter('dataSize', function () {
         return function (bytes) {
             var sizes = ['B', 'KB', 'MB', 'GB', 'TB'];

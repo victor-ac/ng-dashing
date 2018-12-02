@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetText
+ * @name uxAspectsDashing.directive:widgetText
  * @description
  * # widgetText
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetText', function () {
         return {
             templateUrl: 'scripts/directives/widgetText/widgetText.html',

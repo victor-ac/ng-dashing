@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetProgress
+ * @name uxAspectsDashing.directive:widgetProgress
  * @description
  * # widgetProgress
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetProgress', function () {
         return {
             templateUrl: 'scripts/directives/widgetProgress/widgetProgress.html',

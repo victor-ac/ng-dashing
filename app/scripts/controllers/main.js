@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name myDashingApp.controller:MainCtrl
+ * @name uxAspectsDashing.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the myDashingApp
+ * Controller of the uxAspectsDashing
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
   .controller('MainCtrl', function ($scope, $log, $rootScope) {
 
     // the last received msg

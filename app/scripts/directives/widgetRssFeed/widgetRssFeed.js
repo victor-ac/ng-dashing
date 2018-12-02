@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetRssFeed
+ * @name uxAspectsDashing.directive:widgetRssFeed
  * @description
  * # widgetRssFeed
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetRssFeed', ['timeAgoService', function (timeAgoService) {
         return {
             templateUrl: 'scripts/directives/widgetRssFeed/widgetRssFeed.html',

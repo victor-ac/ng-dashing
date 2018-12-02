@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name myDashingApp.controller:DashboardCtrl
+ * @name uxAspectsDashing.controller:DashboardCtrl
  * @description
  * # DashboardCtrl
- * Controller of the myDashingApp
+ * Controller of the uxAspectsDashing
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .controller('DashboardCtrl', function ($scope) {
         var gridster;
         $(document).ready(function () {

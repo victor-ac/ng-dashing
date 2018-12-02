@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetDate
+ * @name uxAspectsDashing.directive:widgetDate
  * @description
  * # widgetDate
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetDate', function () {
         return {
             templateUrl: 'scripts/directives/widgetDate/widgetDate.html',

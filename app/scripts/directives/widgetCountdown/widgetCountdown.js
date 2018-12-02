@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetCountdown
+ * @name uxAspectsDashing.directive:widgetCountdown
  * @description
  * # widgetCountdown
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetCountdown', function () {
         return {
             templateUrl: 'scripts/directives/widgetCountdown/widgetCountdown.html',

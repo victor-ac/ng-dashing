@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetGrid
+ * @name uxAspectsDashing.directive:widgetGrid
  * @description
  * # widgetGrid
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetGrid', function () {
         return {
             templateUrl: 'scripts/directives/widgetGrid/widgetGrid.html',

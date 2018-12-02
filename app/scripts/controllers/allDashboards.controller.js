@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .controller('AllDashboardsCtrl', function ($scope, dashboardService, $location) {
         var vm = this;
 

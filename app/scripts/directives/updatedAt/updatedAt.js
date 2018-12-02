@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:updatedAt
+ * @name uxAspectsDashing.directive:updatedAt
  * @description
  * # updatedAt
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('updatedAt', function () {
         return {
             templateUrl: 'scripts/directives/updatedAt/updatedAt.html',

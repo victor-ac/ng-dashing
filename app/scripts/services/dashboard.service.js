@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc service
- * @name myDashingApp.dashboardService
+ * @name uxAspectsDashing.dashboardService
  * @description
  * # dashboardService
- * Service in the myDashingApp.
+ * Service in the uxAspectsDashing.
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .service('dashboardService', function ($http, $q) {
 
         var backendUrl = 'http://localhost:3030',

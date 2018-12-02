@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetClock
+ * @name uxAspectsDashing.directive:widgetClock
  * @description
  * # widgetClock
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetClock', function () {
         return {
             templateUrl: 'scripts/directives/widgetClock/widgetClock.html',
