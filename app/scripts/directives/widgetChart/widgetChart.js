@@ -2,9 +2,21 @@
 
 /**
  * @ngdoc directive
+ *
  * @name uxAspectsDashing.directive:widgetChart
+ *
  * @description
- * # widgetChart
+ * Displays a chart in which the y-axis represents values and x-axis represents
+ * the time elapsed since the dashboard was originally loaded.
+ *
+ * @element ANY
+ * @param {object} widgetChart Set of data points to be ploted in the chart
+ * @param {string} header Chart title <br /> *(optional, default: "")*
+ * @param {number} maxDataPoints Maximum number of data points to be visible at any given time <br /> *(optional, default: 50)*
+ * @param {boolean} showXAxisLabels Flag controlling visibility of x-axis labels <br /> *(optional, default: true)*
+ * @param {string} xAxisUnit Unit to be appended to x-axis values <br /> *(optional, default: "")*
+ * @param {string} yAxisPrefixUnit Unit to be prefixed to y-axis values <br /> *(optional, default: "")*
+ * @param {string} yAxisSuffixUnit Unit to be appended to y-axis values <br /> *(optional, default: "")*
  */
 angular.module('uxAspectsDashing')
     .directive('widgetChart', ['$colorService', function ($colorService) {
@@ -13,9 +25,9 @@ angular.module('uxAspectsDashing')
             restrict: 'A',
             scope: {
                 'data': '=widgetChart',
+                'header': '@',
                 'maxDataPoints': '=?',
                 'showXAxisLabels': '=?',
-                'header': '@',
                 'xAxisUnit': '@',
                 'yAxisPrefixUnit': '@',
                 'yAxisSuffixUnit': '@'
