@@ -9,7 +9,7 @@
  * Text meant to inform the last time the widget data was updated.
  *
  * @element ANY
- * @param {epochTime} updatedAt Value representing the date in which the widget was updated for the last time
+ * @param {Date} updatedAt Value representing the date in which the widget was updated for the last time
  *
  * @example
  * ```html

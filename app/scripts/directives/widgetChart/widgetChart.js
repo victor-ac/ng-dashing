@@ -11,12 +11,12 @@
  *
  * @element ANY
  * @param {object} widgetChart Set of data points to be ploted in the chart
- * @param {string} header Chart title <br /> *(optional, default: "")*
- * @param {number} maxDataPoints Maximum number of data points to be visible at any given time <br /> *(optional, default: 50)*
- * @param {boolean} showXAxisLabels Flag controlling visibility of x-axis labels <br /> *(optional, default: true)*
- * @param {string} xAxisUnit Unit to be appended to x-axis values <br /> *(optional, default: "")*
- * @param {string} yAxisPrefixUnit Unit to be prefixed to y-axis values <br /> *(optional, default: "")*
- * @param {string} yAxisSuffixUnit Unit to be appended to y-axis values <br /> *(optional, default: "")*
+ * @param {string=} header Chart title <br /> *(default: "")*
+ * @param {number=} maxDataPoints Maximum number of data points to be visible at any given time <br /> *(default: 50)*
+ * @param {boolean=} showXAxisLabels Flag controlling visibility of x-axis labels <br /> *(default: true)*
+ * @param {string=} xAxisUnit Unit to be appended to x-axis values <br /> *(default: "")*
+ * @param {string=} yAxisPrefixUnit Unit to be prefixed to y-axis values <br /> *(default: "")*
+ * @param {string=} yAxisSuffixUnit Unit to be appended to y-axis values <br /> *(default: "")*
  */
 angular.module('uxAspectsDashing')
     .directive('widgetChart', ['$colorService', function ($colorService) {
