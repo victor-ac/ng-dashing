@@ -10,7 +10,7 @@
  *
  * @element ANY
  * @param {string=} timeFormat Format to be applied to current time.
- *                             Accepts any <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">AngularJS date filter</a> format <br /> *(default:* `"h:mm:ss a"`*)*
+ *                             Accepts any <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">AngularJS date filter</a> format <br /> *(default:* `'h:mm:ss a'`*)*
  * @param {string=} header Clock title <br /> *(default: "")*
  */
 angular.module('uxAspectsDashing')
