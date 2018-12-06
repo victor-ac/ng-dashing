@@ -40,3 +40,6 @@ Create visual web dashboards using UX Aspects widgets
 * For reference, you can navigate to http://localhost:9000/#/demo/widgets
 * The job fetching the data can be found in `backend/jobs/dummy.job.js` (update interval is 2s)
 * The template can be found at `app/views/dashboards/demo/widgets.html`
+
+# Accessing documentation
+If you want to view AngularJS-like documentation for the available widgets, run `grunt docs`.
