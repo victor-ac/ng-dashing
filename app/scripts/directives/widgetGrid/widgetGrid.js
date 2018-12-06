@@ -2,9 +2,19 @@
 
 /**
  * @ngdoc directive
+ *
  * @name uxAspectsDashing.directive:widgetGrid
+ *
  * @description
- * # widgetGrid
+ * Table outlining the properties (columns) and values (rows) of an object. This replicates the behavior
+ * of the <a href="https://uxaspects.github.io/UXAspects/#/components/grid#grid-ng1" target="_blank">Grid component</a>
+ * in UX Aspects.
+ *
+ * @element ANY
+ * @param {object} widgetGrid Object with properties to be displayed
+ * @param {boolean=} check Flag controlling whether or not checkboxes should be displayed along with rows <br /> *(default: false)*
+ * @param {string=} header Grid title <br /> *(default: "")*
+ * @param {boolean=} lastUpdated Flag controlling whether or not to show the last date/time the data was updated <br /> *(default: true)*
  */
 angular.module('uxAspectsDashing')
     .directive('widgetGrid', function () {
@@ -13,8 +23,8 @@ angular.module('uxAspectsDashing')
             restrict: 'A',
             scope: {
                 'data': '=widgetGrid',
-                'header': '@',
                 'check': '=?',
+                'header': '@',
                 'lastUpdated': '=?'
             },
             controllerAs: 'vm',
