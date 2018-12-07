@@ -6,7 +6,7 @@
  * @name uxAspectsDashing.directive:widgetGrid
  *
  * @description
- * Table outlining the properties (columns) and values (rows) of an object. This replicates the behavior
+ * Displays a table outlining the properties (columns) and values (rows) of an object. This replicates the behavior
  * of the <a href="https://uxaspects.github.io/UXAspects/#/components/grid#grid-ng1" target="_blank">Grid component</a>
  * in UX Aspects.
  *

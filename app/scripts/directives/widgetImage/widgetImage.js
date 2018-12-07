@@ -6,7 +6,7 @@
  * @name uxAspectsDashing.directive:widgetImage
  *
  * @description
- * Image (JPG, GIF, or PNG) available at a given URL.
+ * Displays an image (JPG, GIF, or PNG) available at a given URL.
  *
  * @element ANY
  * @param {object} widgetImage Object in which the `'imageUrl'` property informs an accessible URL representing a .jpg, .gif, or .png image

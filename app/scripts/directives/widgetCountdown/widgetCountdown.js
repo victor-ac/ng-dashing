@@ -6,7 +6,7 @@
  * @name uxAspectsDashing.directive:widgetCountdown
  *
  * @description
- * Countdown (from seconds up to months) to a certain target date.
+ * Displays a countdown (from seconds up to months) to a certain target date.
  *
  * @element ANY
  * @param {object} widgetCountdown Object in which the `'value'` property informs the countdown target date

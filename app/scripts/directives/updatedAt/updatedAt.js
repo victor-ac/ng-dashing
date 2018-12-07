@@ -6,7 +6,7 @@
  * @name uxAspectsDashing.directive:updatedAt
  *
  * @description
- * Text meant to inform the last time the widget data was updated.
+ * Displays a text meant to inform the last time the widget data was updated.
  *
  * @element ANY
  * @param {Date} updatedAt Value representing the date in which the widget was updated for the last time
