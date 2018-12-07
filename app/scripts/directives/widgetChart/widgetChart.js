@@ -6,11 +6,11 @@
  * @name uxAspectsDashing.directive:widgetChart
  *
  * @description
- * Displays a chart in which the y-axis represents values and x-axis represents
- * the time elapsed since the dashboard was originally loaded.
+ * Displays a live chart in which the y-axis represents values and the x-axis
+ * represents the time elapsed since the dashboard was originally loaded.
  *
  * @element ANY
- * @param {object} widgetChart Set of data points to be ploted in the chart
+ * @param {object} widgetChart Object in which the `'value'` property specifies the most recent data point value
  * @param {string=} header Chart title <br /> *(default: "")*
  * @param {number=} maxDataPoints Maximum number of data points to be visible at any given time <br /> *(default: 50)*
  * @param {boolean=} showXAxisLabels Flag controlling visibility of x-axis labels <br /> *(default: true)*

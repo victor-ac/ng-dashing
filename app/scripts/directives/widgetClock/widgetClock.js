@@ -6,7 +6,7 @@
  * @name uxAspectsDashing.directive:widgetClock
  *
  * @description
- * Displays the current time (updated every second).
+ * Displays the current time using the browser's time zone. The time is updated every second.
  *
  * @element ANY
  * @param {string=} timeFormat Format to be applied to current time.

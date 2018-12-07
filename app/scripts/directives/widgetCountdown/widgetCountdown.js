@@ -9,7 +9,7 @@
  * Countdown (from seconds up to months) to a certain target date.
  *
  * @element ANY
- * @param {Date} widgetCountdown Target date
+ * @param {object} widgetCountdown Object in which the `'value'` property informs the countdown target date
  * @param {string=} dateFormat Target date format.
  *                             Accepts any <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">AngularJS date filter</a> format <br />
  *                             *(default:* `'EEEE, MMMM d, yyyy h:mm:ss a'`*)*
