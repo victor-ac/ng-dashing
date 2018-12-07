@@ -11,7 +11,8 @@
  * in UX Aspects.
  *
  * @element ANY
- * @param {object} widgetGrid Object in which the `'value'` property outlines the array of objects to be listed
+ * @param {object} widgetGrid Object with the following properties:
+ *                            * `'value'`: Array of objects to be listed
  * @param {boolean=} check Flag controlling whether or not checkboxes should be displayed along with rows <br /> *(default: false)*
  * @param {string=} header Grid title <br /> *(default: "")*
  * @param {boolean=} lastUpdated Flag controlling whether or not to show the last date/time the data was updated <br /> *(default: true)*

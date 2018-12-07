@@ -9,8 +9,9 @@
  * Displays a number and, optionally, the variation since the last value.
  *
  * @element ANY
- * @param {object} widgetNumber Object in which the `'value'` property represents a number and
- *                 `'variation'` represents the delta (in percentage) between the previous value and the current one
+ * @param {object} widgetNumber Object with the following properties:
+ *                              * `'value'`: Number
+ *                              * `'variation'`: Delta (in percentage) between the previous value and the current one
  * @param {string=} header Number title <br /> *(default: "")*
  * @param {string=} prefix String to be prepended to the number <br /> *(default: "")*
  * @param {boolean=} showVariation Flag controlling whether or not the variation should be displayed <br />

@@ -9,7 +9,8 @@
  * Displays an image (JPG, GIF, or PNG) available at a given URL.
  *
  * @element ANY
- * @param {object} widgetImage Object in which the `'imageUrl'` property informs an accessible URL representing a .jpg, .gif, or .png image
+ * @param {object} widgetImage Object with the following properties:
+ *                             * `'imageUrl'`: An accessible URL representing a .jpg, .gif, or .png image
  * @param {string=} header Image title <br /> *(default: "")*
  */
 angular.module('uxAspectsDashing')

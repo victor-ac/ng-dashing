@@ -9,9 +9,11 @@
  * Displays a list of items.
  *
  * @element ANY
- * @param {object} widgetList Object in which the `'list'` property represents an array of objects.
- *                            Each one of them is a key-value pair in which the key is represented by
- *                            the `'name'` property and value by `'value'`
+ * @param {object} widgetList Object with the following properties:
+ *                            * `'list'`: Array of objects to be listed
+ *                              * Each one of them is a key-value pair with the following properties:
+ *                                * `'name'`: Property name
+ *                                * `'value'`: Property value
  * @param {string=} color Name of a color to use for the item background and borders.
  *                        Accepts any of the names supported by <a href="https://uxaspects.github.io/UXAspects/#/components/utilities#color-service" target="_blank">Color Service</a> in UX Aspects <br />
  *                        *(default: transparent)*

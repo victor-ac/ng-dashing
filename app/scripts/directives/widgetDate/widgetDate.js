@@ -9,7 +9,8 @@
  * Displays the current date and time of a given timezone.
  *
  * @element ANY
- * @param {object} widgetDate Object in which the `'value'` property specifies the reference date
+ * @param {object} widgetDate Object with the following properties:
+ *                            * `'value'`: Date object representing the reference date
  * @param {string=} dateFormat Format to be applied to the target date <br /> *(default: *`'EEE MMM d yyyy'`*)*
  * @param {string=} header Date title
  * @param {string=} timeFormat Format to be applied to the target time <br /> *(default: *`'h:mm:ss a'`*)*
