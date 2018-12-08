@@ -3,7 +3,7 @@
 describe('Directive: widgetTable', function () {
 
   // load the directive's module
-  beforeEach(module('myDashingApp'));
+  beforeEach(module('uxAspectsDashing'));
 
   var element,
     scope;

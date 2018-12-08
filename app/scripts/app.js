@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name myDashingApp
+ * @name uxAspectsDashing
  * @description
- * # myDashingApp
+ * # uxAspectsDashing
  *
  * Main module of the application.
  */
 angular
-    .module('myDashingApp', [
+    .module('uxAspectsDashing', [
         'ux-aspects',
         'ngAnimate',
         'ngCookies',

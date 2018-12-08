@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name myDashingApp.controller:AboutCtrl
+ * @name uxAspectsDashing.controller:AboutCtrl
  * @description
  * # AboutCtrl
- * Controller of the myDashingApp
+ * Controller of the uxAspectsDashing
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
   .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',

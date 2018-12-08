@@ -2,23 +2,41 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetList
+ *
+ * @name uxAspectsDashing.directive:widgetList
+ *
  * @description
- * # widgetList
+ * Displays a list of items.
+ *
+ * @element ANY
+ * @param {object} widgetList Object with the following properties:
+ *                            * `'list'`: Array of objects to be listed
+ *                              * Each one of them is a key-value pair with the following properties:
+ *                                * `'name'`: Property name
+ *                                * `'value'`: Property value
+ * @param {string=} color Name of a color to use for the item background and borders.
+ *                        Accepts any of the names supported by <a href="https://uxaspects.github.io/UXAspects/#/components/utilities#color-service" target="_blank">Color Service</a> in UX Aspects <br />
+ *                        *(default: transparent)*
+ * @param {string=} emptyMessage Message to be presented if the list is empty <br /> *(default: "")*
+ * @param {string=} header List title <br /> *(default: "")*
+ * @param {boolean=} hideBullets Flag controlling whether or not bullet points should be displayed in unordered lists
+ *                   *(default: false)*
+ * @param {boolean=} isOrdered Flag controlling whether or not the list is ordered <br /> *(default: false)*
+ * @param {number=} limit Maximum number of items to be displayed in the list <br /> *(default: no limit)*
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetList', function () {
         return {
             templateUrl: 'scripts/directives/widgetList/widgetList.html',
             restrict: 'A',
             scope: {
                 'data': '=widgetList',
-                'isOrdered': '=?',
-                'limit': '=?',
-                'hideBullets': '=?', // Applicable only to un-ordered lists
-                'color': '@', // UX Aspects theme color names only
+                'color': '@',
                 'emptyMessage': '@',
-                'header': '@'
+                'header': '@',
+                'hideBullets': '=?',
+                'isOrdered': '=?',
+                'limit': '=?'
             },
             controllerAs: 'vm',
             controller: function ($scope, $colorService) {

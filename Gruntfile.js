@@ -129,6 +129,14 @@ module.exports = function (grunt) {
                     open: true,
                     base: '<%= yeoman.dist %>'
                 }
+            },
+            docs: {
+                options: {
+                    open: true,
+                    port: 9002,
+                    base: 'docs',
+                    keepalive: true
+                }
             }
         },
 
@@ -164,6 +172,7 @@ module.exports = function (grunt) {
                     ]
                 }]
             },
+            docs: 'docs',
             server: '.tmp'
         },
 
@@ -412,6 +421,16 @@ module.exports = function (grunt) {
                 configFile: 'test/karma.conf.js',
                 singleRun: true
             }
+        },
+
+        ngdocs: {
+            options: {
+                title: 'UX Aspects Dashing Documentation'
+            },
+            all: [
+                'app/scripts/app.js',
+                'app/scripts/directives/**/*.js'
+            ]
         }
     });
 
@@ -454,6 +473,12 @@ module.exports = function (grunt) {
         'filerev',
         'usemin',
         'htmlmin'
+    ]);
+
+    grunt.registerTask('docs', [
+        'clean:docs',
+        'ngdocs',
+        'connect:docs'
     ]);
 
     grunt.registerTask('default', [

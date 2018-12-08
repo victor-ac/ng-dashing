@@ -2,19 +2,30 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetCountdown
+ *
+ * @name uxAspectsDashing.directive:widgetCountdown
+ *
  * @description
- * # widgetCountdown
+ * Displays a countdown (from seconds up to months) to a certain target date.
+ *
+ * @element ANY
+ * @param {object} widgetCountdown Object with the following properties:
+ *                                 * `'value'`: Date object representing the countdown target date
+ * @param {string=} dateFormat Target date format.
+ *                             Accepts any <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">AngularJS date filter</a> format <br />
+ *                             *(default:* `'EEEE, MMMM d, yyyy h:mm:ss a'`*)*
+ * @param {string=} header Countdown title <br /> *(default: "")*
+ * @param {boolean=} hideSeconds Flag controlling visibility of seconds in the countdown <br /> *(default: false)*
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetCountdown', function () {
         return {
             templateUrl: 'scripts/directives/widgetCountdown/widgetCountdown.html',
             restrict: 'A',
             scope: {
                 'data': '=widgetCountdown',
+                'dateFormat': '@',
                 'header': '@',
-                'dateFormat': '@', // Date format only affects the displayed date under the countdown
                 'hideSeconds': '=?'
             },
             controller: function ($scope) {

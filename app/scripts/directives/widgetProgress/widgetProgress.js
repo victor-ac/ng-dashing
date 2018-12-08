@@ -2,11 +2,25 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetProgress
+ *
+ * @name uxAspectsDashing.directive:widgetProgress
+ *
  * @description
- * # widgetProgress
+ * Displays the progress (in percentage) towards a certain metric.
+ *
+ * @element ANY
+ * @param {object} widgetProgress Object with the following properties:
+ *                                * `'value'` Object with the following properties:
+ *                                  * `'current'`: Number indicating current progress
+ *                                  * `'total'`: Number representing 100% of the progress
+ * @param {string=} header Progress title <br /> *(default: "")*
+ * @param {boolean=} isSize Flag controlling whether or not the number represents file size.
+ *                          If `'true'`, a filter will be applied to show the number in B, KB, MB, GB, or TB.
+ *                          This is only applicable if `'type'` is `'donut'` <br /> *(default: false)*
+ * @param {boolean=} showValue Flag controlling visibility of the raw value (not the percentage) <br /> *(default: false)*
+ * @param {string=} type Progress type: `'donut'` or `'progress-bar'` <br /> *(default: "progress-bar")*
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetProgress', function () {
         return {
             templateUrl: 'scripts/directives/widgetProgress/widgetProgress.html',
@@ -14,9 +28,9 @@ angular.module('myDashingApp')
             scope:{
                 'data' : '=widgetProgress',
                 'header': '@',
-                'type': '@',
+                'isSize': '=?',
                 'showValue': '=?',
-                'isSize': '=?' //Applicable to donut only
+                'type': '@'
             },
             controller: function ($scope, $filter) {
                 if ($scope.type !== 'donut') {

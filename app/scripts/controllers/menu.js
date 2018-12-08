@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name myDashingApp.controller:MenuCtrl
+ * @name uxAspectsDashing.controller:MenuCtrl
  * @description
  * # MenuCtrl
- * Controller of the myDashingApp
+ * Controller of the uxAspectsDashing
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
   .controller('MenuCtrl', function ($scope, $routeParams, dashboardService) {
         dashboardService.getNamespaceDashboards($routeParams.namespace).then(function (result) {
             $scope.dashboards = result.data;

@@ -2,11 +2,21 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetRssFeed
+ *
+ * @name uxAspectsDashing.directive:widgetRssFeed
+ *
  * @description
- * # widgetRssFeed
+ * Displays a list of articles published in a RSS feed.
+ *
+ * @element ANY
+ * @param {object} widgetRssFeed Object with the following properties:
+ *                               * `'items'`: Array of objects representing the feed articles
+ *                                 * Each article is an object with the following properties:
+ *                                   * `'title'`: Entry title
+ *                                   * `'contentSnippet'`: Entry description, usually a summary text
+ * @param {string=} header RSS Feed Title <br /> *(default: "")*
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetRssFeed', ['timeAgoService', function (timeAgoService) {
         return {
             templateUrl: 'scripts/directives/widgetRssFeed/widgetRssFeed.html',

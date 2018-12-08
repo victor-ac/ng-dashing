@@ -2,20 +2,33 @@
 
 /**
  * @ngdoc directive
- * @name myDashingApp.directive:widgetChart
+ *
+ * @name uxAspectsDashing.directive:widgetChart
+ *
  * @description
- * # widgetChart
+ * Displays a live chart in which the y-axis represents values and the x-axis
+ * represents the time elapsed since the dashboard was originally loaded.
+ *
+ * @element ANY
+ * @param {object} widgetChart Object with the following properties:
+ *                             * `'value'`: Most recent data point number
+ * @param {string=} header Chart title <br /> *(default: "")*
+ * @param {number=} maxDataPoints Maximum number of data points to be visible at any given time <br /> *(default: 50)*
+ * @param {boolean=} showXAxisLabels Flag controlling visibility of x-axis labels <br /> *(default: true)*
+ * @param {string=} xAxisUnit Unit to be appended to x-axis values <br /> *(default: "")*
+ * @param {string=} yAxisPrefixUnit Unit to be prefixed to y-axis values <br /> *(default: "")*
+ * @param {string=} yAxisSuffixUnit Unit to be appended to y-axis values <br /> *(default: "")*
  */
-angular.module('myDashingApp')
+angular.module('uxAspectsDashing')
     .directive('widgetChart', ['$colorService', function ($colorService) {
         return {
             templateUrl: 'scripts/directives/widgetChart/widgetChart.html',
             restrict: 'A',
             scope: {
                 'data': '=widgetChart',
+                'header': '@',
                 'maxDataPoints': '=?',
                 'showXAxisLabels': '=?',
-                'header': '@',
                 'xAxisUnit': '@',
                 'yAxisPrefixUnit': '@',
                 'yAxisSuffixUnit': '@'
