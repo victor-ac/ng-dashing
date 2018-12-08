@@ -424,7 +424,13 @@ module.exports = function (grunt) {
         },
 
         ngdocs: {
-            all: ['app/scripts/directives/**/*.js']
+            options: {
+                title: 'UX Aspects Dashing Documentation'
+            },
+            all: [
+                'app/scripts/app.js',
+                'app/scripts/directives/**/*.js'
+            ]
         }
     });
 
